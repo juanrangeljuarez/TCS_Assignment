@@ -30,15 +30,24 @@ body{
 }
 
 .float-container {
-  border: 3px solid #fff;
   padding: 20px;
+}
+
+.float-ball-container {
+  padding: 10px;
 }
 
 .float-child {
   width: 25%;
   float: left;
   padding: 20px;
-}  
+}
+
+.float-ball {
+  width: 75%;
+  float: left;
+  padding: 20px;
+}
 
 .float-player {
   width: 50%;

@@ -1,6 +1,4 @@
 
-
-
 function newElement() {
     var div = document.createElement("div");
     div.className = 'card mb-3';
@@ -25,7 +23,8 @@ function newElement() {
     p.className = 'card-text';
 
     var img = document.getElementById('pictureAddress').value;   
-    var i = img.toString();    
+    var i = img.toString(); 
+   
     if (i === '') {
         alert("You must select a picture");
     } else {
@@ -46,9 +45,7 @@ function newElement() {
             }
             else{
                 var pText = document.createTextNode(playerInfo);
-                p.appendChild(pText);
-    
-    
+                p.appendChild(pText); 
     
                 div.appendChild(div1);
                 div1.appendChild(div2);
@@ -67,16 +64,8 @@ function newElement() {
                 document.getElementById("myUL").appendChild(div);
 
             }
-           
-
         }
-        
-        
-
-    }
-    
-
-   
+    }   
 }
 
 
@@ -144,55 +133,3 @@ function addContact(){
     }
 
 }
-
-
-/*
-<ul id="myUL">
-        <div class="card" style="width: 60rem;">
-            <img src="./images/footbonaut.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-            <h5 class="card-title">Cristiano Ronaldo</h5>
-            <p class="card-text">The Footbonaut is a football training machine which fires balls at different speeds and 
-                trajectories at players, who must control and pass the ball into a highlighted square. In addition to honing 
-                ball skills, the machine is designed to improve a player's reaction time</p>
-            </div>
-        </div>
-    </ul>
-
-
-
-     var div = document.createElement("div");
-    div.className = 'card';
-    div.style = 'width: 60rem;';
-   // alert('Here0');
-    var image = document.createElement("img");
-    image.className = 'card-img-top';
-
-    var img = document.getElementById('pictureAddress').value;   
-    var i = img.toString();    
-    var address = "./images/".concat(i.substr(i.lastIndexOf("\\")+1));
-    alert(address);
-    image.src = address;
-
-    var div2 = document.createElement("div");
-    div2.className = 'card-body';
-
-    var h5 = document.createElement("h5");
-    h5.className = 'card-title';
-    var articleName = document.getElementById('articleName').value;
-    var hText = document.createTextNode(articleName);
-    h5.appendChild(hText);
-    
-    var p = document.createElement("p");
-    p.className = 'card-text';
-    var articleInfo = document.getElementById('articleInfo').value;
-    var pText = document.createTextNode(articleInfo);
-    p.appendChild(pText);
-
-    div.appendChild(image);
-    div.appendChild(div2);
-    div.appendChild(h5);
-    div.appendChild(p);
-    
-    document.getElementById("myUL").appendChild(div);
-*/
