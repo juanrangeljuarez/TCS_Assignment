@@ -24,51 +24,38 @@
             <li class="nav-item">
               <a class="nav-link" href="./home.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./about.html">About</a>
+            <li class="nav-item active">
+              <a class="nav-link" href="./about.html">About<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="./blog.html">Blogs</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="./contact.html">Contact Us<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="./contact.html">Contact Us</a>
             </li>
             
           </ul>       
         </div>
     </nav> 
-    <img src="./images/contactUs.png"  class="contactImage" width="300px" height="100px">
-    <div class="container-contact">
+    <div class="container-fluid ">
+        <div class="container-about">
+            <h1 class="title-about">Soccer</h1>
+            <p>The sport of soccer (called football in most of the world) is considered to be the world's most popular sport. 
+                In soccer there are two teams of eleven players. Soccer is played on a large grass field with a goal at each 
+                end. The object of the game is to get the soccer ball into the opposing team's goal. The key to soccer is 
+                that, with the exception of the goalie, players cannot touch the ball with their hands, they can only 
+                kick, knee, or head the ball to advance it or score a goal.</p>
+            <img src="./images/soccer-banner.jpg" class="aboutImage">
+            <h5>What is Soccer?</h5>
+            <p>Soccer is a team sport played by a team of 11 players against another team of 11 players on a field</p>
+            <p>It is known as soccer in North America, but is called football in most of the rest of the world. 
+                Its full name is Association Football.</p>
+        </div>
         
-        <form name="contactForm" class="form-contact" onsubmit="return addContact()" method="post">
-            <h2>Contact</h2>
-            <div class="form-group">
-              <label >Name: </label>
-              <input class="form-control" id="name" aria-describedby="emailHelp">
-              <div class="error" id="nameErr"></div>
-            </div>
-            <div class="form-group">
-              <label>Email:</label>
-              <input class="form-control" id="email">
-              <div class="error" id="emailErr"></div>
-            </div>
-            <div class="form-group">
-                <label >Phone Number: </label>
-                <input class="form-control" id="phoneNumber" maxlength="10">
-                <div class="error" id="phoneErr"></div>
-            </div>
-            <div class="form-group">
-                <label>Message</label>
-                <textarea class="form-control" id="message" rows="3"></textarea>
-                <div class="error" id="messageErr"></div>
-            </div>
-
-            <div class="row">
-              <input type="submit" class="btn btn-primary" value="Submit">
-          </div>
-        </form>
     </div>
 
+
+    
       
     <script type="text/javascript" src="myscript.js"></script>
 

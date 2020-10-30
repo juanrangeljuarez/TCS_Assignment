@@ -2,46 +2,79 @@
 
 
 function newElement() {
-
-    //alert('Hello');
     var div = document.createElement("div");
-    div.className = 'card';
-    div.style = 'width: 60rem;';
-   // alert('Here0');
+    div.className = 'card mb-3';
+    div.style = 'max-width: 50%;';
+    var div1 = document.createElement("div");
+    div1.className = 'row no-gutters';
+    var div2 = document.createElement("div");
+    div2.className = 'col-md-4';
     var image = document.createElement("img");
-    image.className = 'card-img-top';
+    image.className = 'card-img';
+    var div3 = document.createElement("div");
+    div3.className = 'col-md-8';
+    var div4 = document.createElement("div");
+    div4.className = 'center-player-name';
+    var h2 = document.createElement("h2");
+    h2.className = 'card-title';
+    var div5 = document.createElement("div");
+    div5.className = 'col-md-12';
+    var div6 = document.createElement("div");
+    div6.className = 'col-md-12';
+    var p = document.createElement("p");
+    p.className = 'card-text';
 
     var img = document.getElementById('pictureAddress').value;   
     var i = img.toString();    
-    var address = "./images/".concat(i.substr(i.lastIndexOf("\\")+1));
-    alert(address);
-    image.src = address;
+    if (i === '') {
+        alert("You must select a picture");
+    } else {
+        var address = "./images/".concat(i.substr(i.lastIndexOf("\\")+1));
+        image.src = address;
 
+        var playerName = document.getElementById('articleName').value;
+        if (playerName === '') {
+            alert("You must enter a player name");
+        }
+        else{
+            var hText = document.createTextNode(playerName);
+            h2.appendChild(hText);
+
+            var playerInfo = document.getElementById('articleInfo').value;
+            if (playerInfo === '') {
+                alert("You must enter information for the player");
+            }
+            else{
+                var pText = document.createTextNode(playerInfo);
+                p.appendChild(pText);
     
-
-    var div2 = document.createElement("div");
-    div2.className = 'card-body';
-
-    var h5 = document.createElement("h5");
-    h5.className = 'card-title';
-    var articleName = document.getElementById('articleName').value;
-    var hText = document.createTextNode(articleName);
-    //var hText = document.createTextNode('La liga');
-    h5.appendChild(hText);
     
-    var p = document.createElement("p");
-    p.className = 'card-text';
-    var articleInfo = document.getElementById('articleInfo').value;
-    var pText = document.createTextNode(articleInfo);
-    //var pText = document.createTextNode('The Footbonaut is a football training machine which fires balls at different speeds and trajectories at players, who must control and pass the ball into a highlighted square.');
-    p.appendChild(pText);
-
-    div.appendChild(image);
-    div.appendChild(div2);
-    div.appendChild(h5);
-    div.appendChild(p);
     
-    document.getElementById("myUL").appendChild(div);
+                div.appendChild(div1);
+                div1.appendChild(div2);
+                div2.appendChild(image);
+                div1.appendChild(div3);
+                div3.appendChild(div4);
+                div4.appendChild(h2);
+                div1.appendChild(div5);
+                div5.appendChild(div6);
+                div6.appendChild(p);
+
+                document.getElementById('pictureAddress').value = "";
+                document.getElementById('articleName').value = "";
+                document.getElementById('articleInfo').value = "";
+                
+                document.getElementById("myUL").appendChild(div);
+
+            }
+           
+
+        }
+        
+        
+
+    }
+    
 
    
 }
@@ -111,3 +144,55 @@ function addContact(){
     }
 
 }
+
+
+/*
+<ul id="myUL">
+        <div class="card" style="width: 60rem;">
+            <img src="./images/footbonaut.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Cristiano Ronaldo</h5>
+            <p class="card-text">The Footbonaut is a football training machine which fires balls at different speeds and 
+                trajectories at players, who must control and pass the ball into a highlighted square. In addition to honing 
+                ball skills, the machine is designed to improve a player's reaction time</p>
+            </div>
+        </div>
+    </ul>
+
+
+
+     var div = document.createElement("div");
+    div.className = 'card';
+    div.style = 'width: 60rem;';
+   // alert('Here0');
+    var image = document.createElement("img");
+    image.className = 'card-img-top';
+
+    var img = document.getElementById('pictureAddress').value;   
+    var i = img.toString();    
+    var address = "./images/".concat(i.substr(i.lastIndexOf("\\")+1));
+    alert(address);
+    image.src = address;
+
+    var div2 = document.createElement("div");
+    div2.className = 'card-body';
+
+    var h5 = document.createElement("h5");
+    h5.className = 'card-title';
+    var articleName = document.getElementById('articleName').value;
+    var hText = document.createTextNode(articleName);
+    h5.appendChild(hText);
+    
+    var p = document.createElement("p");
+    p.className = 'card-text';
+    var articleInfo = document.getElementById('articleInfo').value;
+    var pText = document.createTextNode(articleInfo);
+    p.appendChild(pText);
+
+    div.appendChild(image);
+    div.appendChild(div2);
+    div.appendChild(h5);
+    div.appendChild(p);
+    
+    document.getElementById("myUL").appendChild(div);
+*/
