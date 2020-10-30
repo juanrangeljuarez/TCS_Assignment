@@ -14,7 +14,8 @@
   <body>
 
     <nav class="navbar navbar-expand-md navbar-dark bg-primary mb-4">
-        <a class="navbar-brand" href="#">TCS Assignment</a>
+      <img class="logo-background" src="./images/soccer-transparent.png" alt="Soccer Ball" width="50px" height="50px">
+      <a class="navbar-brand" href="#">The World of Soccer</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -36,8 +37,44 @@
           </ul>       
         </div>
     </nav>
-    
+    <h2>Players</h2>
 
+    <ul id="myUL">
+        <div class="card" style="width: 60rem;">
+            <img src="./images/footbonaut.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">Cristiano Ronaldo</h5>
+            <p class="card-text">The Footbonaut is a football training machine which fires balls at different speeds and 
+                trajectories at players, who must control and pass the ball into a highlighted square. In addition to honing 
+                ball skills, the machine is designed to improve a player's reaction time</p>
+            </div>
+        </div>
+    </ul>
+
+    <div class="container-contact">
+        <form class="form-blog" method="post">
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="validationServer01">Player name</label>
+              <input type="text" class="form-control" id="articleName" value="">
+            </div>
+            <div class="col-md-6 mb-6">
+                <label >Example file input</label>
+                <input type="file" class="form-control-file" id="pictureAddress">
+            </div>
+          </div> 
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Description</label>
+            <textarea class="form-control" id="articleInfo" rows="3"></textarea>
+          </div>     
+      
+        
+          <button type='button' onclick="newElement()" class="btn btn-primary">submit</button> 
+    </form>
+  </div>
+
+
+    <script type="text/javascript" src="myscript.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>

@@ -12,3 +12,51 @@
       font-size: 3.5rem;
     }
   }
+
+.card {
+    margin: 0 auto; 
+    float: none;
+    margin-bottom: 30px; 
+}
+
+
+.descriptionSoccer{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.float-container {
+  border: 3px solid #fff;
+  padding: 20px;
+}
+
+.float-child {
+  width: 25%;
+  float: left;
+  padding: 20px;
+}  
+
+.form-blog {
+  width: 50%;
+  float: left;
+  margin-left: 40px;
+}  
+.container-contact {
+  
+  margin-left: 30%;
+}
+.form-contact {
+  width: 50%;
+  float: left;
+  margin-left: 40px;
+}  
+
+.error {
+    color: red;
+    font-size: 90%;
+  }
+
+  .logo-background{
+    border-radius: 60%;
+
+  }
